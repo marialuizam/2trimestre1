@@ -20,7 +20,7 @@
             <nav>
                 <ul class="flex space-x-4 text-lg">
                     <li><a href="#" class="hover:text-yellow-300 transition duration-300">Início</a></li>
-                    <li><a href="#" class="hover:text-yellow-300 transition duration-300">Eventos</a></li>
+                    <li><a href="#" class="hover:text-yellow-300 transition duration-300">Sobre a Conexão</a></li>
                     <li><a href="#" class="hover:text-yellow-300 transition duration-300">Histórias</a></li>
                     <li><a href="#" class="hover:text-yellow-300 transition duration-300">Contato</a></li>
                 </ul>
@@ -29,33 +29,67 @@
     </header>
 
     <main class="container mx-auto p-4 flex-grow">
-        <section class="mb-8 bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 text-center">A Ponte entre Tradições e Inovação!</h2>
-            <p class="text-gray-700 leading-relaxed text-lg text-center max-w-3xl mx-auto">
-                Explore as festividades que celebram a rica cultura do campo e a efervescência da vida urbana, unindo o melhor de dois mundos. Aqui, cada evento é uma oportunidade de conexão, aprendizado e muita alegria!
+        <section class="mb-12 bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+                Festejando a Conexão: O Coração do Campo e a Alma da Cidade!
+            </h2>
+            <p class="text-gray-700 leading-relaxed text-xl max-w-4xl mx-auto mb-8">
+                Descubra a beleza da união entre as tradições rurais e a inovação urbana. Nosso objetivo é celebrar e fortalecer os laços que conectam o campo e a cidade, mostrando como cada um enriquece o outro.
             </p>
             <div class="flex justify-center mt-6">
-                <img src="https://placehold.co/600x300/FDBA74/FFFFFF?text=Festa+Campo+e+Cidade" alt="Ilustração de pessoas celebrando em ambiente de campo e cidade" class="rounded-lg shadow-md max-w-full h-auto">
+                <img src="https://placehold.co/800x400/FDBA74/FFFFFF?text=Campo+e+Cidade+Unidos" alt="[Image of Countryside and City United]" class="rounded-xl shadow-lg max-w-full h-auto">
             </div>
         </section>
 
-        <section class="mb-8 bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Próximos Eventos de Conexão</h2>
-            <div id="eventos-lista" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <p class="text-gray-600 text-center col-span-full">Nenhum evento cadastrado ainda. Adicione um para começar a festejar!</p>
+        <section class="mb-12 bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">O Que é Festejando Conexão Campo e Cidade?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="text-gray-700 leading-relaxed text-lg">
+                    <p class="mb-4">
+                        É um movimento que busca valorizar e promover a interdependência entre o ambiente rural e o urbano. Acreditamos que a riqueza cultural, econômica e social de uma região se manifesta plenamente quando campo e cidade se reconhecem e se complementam.
+                    </p>
+                    <p>
+                        Desde a produção de alimentos frescos que chegam à sua mesa, passando pelas festas tradicionais que mantêm viva a história, até as inovações tecnológicas que impulsionam o progresso em ambos os lados, a conexão é constante e vital.
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://placehold.co/400x300/A7F3D0/333333?text=Produtos+do+Campo+na+Cidade" alt="[Image of Countryside Products in the City]" class="rounded-lg shadow-md max-w-full h-auto">
+                </div>
             </div>
         </section>
 
-        <section class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Compartilhe Seu Evento!</h2>
-            <div class="flex flex-col space-y-5 max-w-2xl mx-auto">
-                <input type="text" id="nome-evento" placeholder="Nome do Evento (Ex: Festa Junina na Praça)" class="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:border-transparent text-lg">
-                <input type="text" id="local-evento" placeholder="Local (Ex: Parque Central, Fazenda Esperança)" class="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:border-transparent text-lg">
-                <input type="date" id="data-evento" class="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:border-transparent text-lg">
-                <textarea id="descricao-evento" placeholder="Descreva seu evento: o que é, atrações, por que ele conecta campo e cidade?" rows="4" class="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:border-transparent text-lg"></textarea>
-                <button id="adicionar-btn" class="bg-green-700 text-white p-4 rounded-lg hover:bg-green-800 transition duration-300 shadow-lg text-xl font-semibold">Adicionar Evento</button>
-                <div id="mensagem-validacao" class="text-red-600 text-center mt-2 hidden"></div>
+        <section class="mb-12 bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Como Celebramos Essa Conexão?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-green-50 rounded-xl shadow-sm">
+                    <h3 class="text-2xl font-semibold text-green-800 mb-3">Cultura e Tradição</h3>
+                    <p class="text-gray-700">
+                        Valorizamos as festas folclóricas, a culinária típica e os saberes ancestrais que vêm do campo e enriquecem a vida na cidade.
+                    </p>
+                </div>
+                <div class="p-6 bg-yellow-50 rounded-xl shadow-sm">
+                    <h3 class="text-2xl font-semibold text-yellow-800 mb-3">Economia Local</h3>
+                    <p class="text-gray-700">
+                        Incentivamos o comércio justo e a valorização dos produtos orgânicos e artesanais, fortalecendo a economia de ambos os ambientes.
+                    </p>
+                </div>
+                <div class="p-6 bg-orange-50 rounded-xl shadow-sm">
+                    <h3 class="text-2xl font-semibold text-orange-800 mb-3">Sustentabilidade</h3>
+                    <p class="text-gray-700">
+                        Promovemos práticas que respeitam o meio ambiente, unindo a sabedoria do campo com as soluções urbanas para um futuro mais verde.
+                    </p>
+                </div>
             </div>
+        </section>
+
+        <section class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Quer Saber Mais ou Contribuir?</h2>
+            <p class="text-gray-700 leading-relaxed text-lg mb-8 max-w-3xl mx-auto">
+                Se você se identifica com a nossa missão de fortalecer a conexão entre campo e cidade, explore nossas histórias, entre em contato e faça parte dessa celebração contínua!
+            </p>
+            <a href="#" class="inline-block bg-green-700 text-white p-4 rounded-lg hover:bg-green-800 transition duration-300 shadow-lg text-xl font-semibold px-8 py-4">
+                Explore Nossas Histórias
+            </a>
         </section>
     </main>
 
@@ -65,68 +99,5 @@
             <p class="mt-2">Celebre a união, celebre a cultura!</p>
         </div>
     </footer>
-
-    <script>
-        // Array para armazenar os eventos. Inicialmente vazio.
-        let eventos = [];
-
-        // Função para exibir os eventos na página
-        function exibirEventos() {
-            const eventosLista = document.getElementById('eventos-lista');
-            eventosLista.innerHTML = ''; // Limpa a lista antes de adicionar os eventos
-
-            if (eventos.length === 0) {
-                // Mensagem exibida quando não há eventos
-                eventosLista.innerHTML = '<p class="text-gray-600 text-center col-span-full">Nenhum evento cadastrado ainda. Adicione um para começar a festejar!</p>';
-                return;
-            }
-
-            // Itera sobre cada evento no array e cria um card para ele
-            eventos.forEach(evento => {
-                const eventoCard = document.createElement('div');
-                // Adiciona classes do Tailwind para estilizar o card do evento
-                eventoCard.classList.add('bg-white', 'p-6', 'rounded-xl', 'shadow-lg', 'border', 'border-gray-200', 'hover:shadow-xl', 'transition-shadow', 'duration-300', 'transform', 'hover:-translate-y-1');
-                eventoCard.innerHTML = `
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">${evento.nome}</h3>
-                    <p class="text-gray-600 mb-1"><strong class="font-medium">Local:</strong> ${evento.local}</p>
-                    <p class="text-gray-600 mb-3"><strong class="font-medium">Data:</strong> ${new Date(evento.data).toLocaleDateString('pt-BR')}</p>
-                    <p class="text-gray-700 text-base leading-relaxed">${evento.descricao}</p>
-                `;
-                eventosLista.appendChild(eventoCard);
-            });
-        }
-
-        // Adiciona um ouvinte de evento ao botão "Adicionar Evento"
-        document.getElementById('adicionar-btn').addEventListener('click', () => {
-            // Pega os valores dos campos do formulário
-            const nome = document.getElementById('nome-evento').value.trim();
-            const local = document.getElementById('local-evento').value.trim();
-            const data = document.getElementById('data-evento').value.trim();
-            const descricao = document.getElementById('descricao-evento').value.trim();
-            const mensagemValidacao = document.getElementById('mensagem-validacao');
-
-            // Validação simples para garantir que todos os campos estão preenchidos
-            if (nome && local && data && descricao) {
-                // Adiciona o novo evento ao array
-                eventos.push({ nome, local, data, descricao });
-                exibirEventos(); // Atualiza a lista de eventos na página
-
-                // Limpa os campos do formulário após adicionar
-                document.getElementById('nome-evento').value = '';
-                document.getElementById('local-evento').value = '';
-                document.getElementById('data-evento').value = '';
-                document.getElementById('descricao-evento').value = '';
-                mensagemValidacao.classList.add('hidden'); // Esconde a mensagem de validação, se visível
-            } else {
-                // Exibe uma mensagem de erro se algum campo estiver vazio
-                mensagemValidacao.textContent = 'Por favor, preencha todos os campos para adicionar um evento.';
-                mensagemValidacao.classList.remove('hidden');
-            }
-        });
-
-        // Chama a função para exibir os eventos ao carregar a página
-        // Isso garante que a mensagem "Nenhum evento cadastrado" apareça se a lista estiver vazia.
-        exibirEventos();
-    </script>
 </body>
 </html>
