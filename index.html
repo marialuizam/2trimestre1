@@ -1,77 +1,123 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impacto do Desmatamento</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Festejando Campo e Cidade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Define a fonte Inter para todo o corpo do documento */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Impacto do Desmatamento</h1>
-        <img src="cataratas-do-iguacu.jpg" alt="Foto das Cataratas do Iguaçu, um lugar com muitas árvores e mata nativa preservada.">
-        <p>O desmatamento intensifica fenômenos negativos no meio ambiente e na vida das pessoas, afetando enchentes, temperatura e qualidade de vida.</p>
-        <nav>
-            <ul>
-                <li><a href="#problemas">Os Problemas</a></li>
-                <li><a href="#consequencias">Consequências</a></li>
-                <li><a href="#conclusao">Conclusão</a></li>
-            </ul>
-        </nav>
+<body class="bg-gradient-to-br from-green-50 to-yellow-50 min-h-screen flex flex-col">
+    <header class="bg-gradient-to-r from-green-700 to-yellow-600 text-white p-4 shadow-lg rounded-b-lg">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2 md:mb-0">Festejando Campo e Cidade</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-yellow-200 transition duration-300">Início</a></li>
+                    <li><a href="#" class="hover:text-yellow-200 transition duration-300">Eventos do Campo</a></li>
+                    <li><a href="#" class="hover:text-yellow-200 transition duration-300">Eventos da Cidade</a></li>
+                    <li><a href="#" class="hover:text-yellow-200 transition duration-300">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-<!-- código omitido -->
+    <main class="container mx-auto p-4 flex-grow">
+        <section class="mb-8 bg-white p-6 rounded-xl shadow-md">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Bem-vindo(a) ao Festejando Campo e Cidade!</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Descubra as mais vibrantes festividades que celebram a cultura e as tradições do nosso campo e da nossa cidade. De festas juninas a carnavais, de rodeios a festivais gastronômicos, aqui você encontra tudo para planejar sua próxima aventura cultural!
+            </p>
+        </section>
 
+        <section class="mb-8 bg-white p-6 rounded-xl shadow-md">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Próximos Eventos</h2>
+            <div id="eventos-lista" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                </div>
+        </section>
 
- <main>
-    <section id="problemas" class="conteudo">
-        <h2>Os Problemas</h2>
-        <article>
-            <h3>Aumento das enchentes</h3>
-            <p>As árvores absorvem a água da chuva e ajudam na infiltração no solo. Sem vegetação, a água escoa rapidamente, causando enchentes.</p>
-        </article>
+        <section class="bg-white p-6 rounded-xl shadow-md">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Adicionar Novo Evento</h2>
+            <div class="flex flex-col space-y-4">
+                <input type="text" id="nome-evento" placeholder="Nome do Evento" class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                <input type="text" id="local-evento" placeholder="Local do Evento" class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                <input type="date" id="data-evento" class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                <textarea id="descricao-evento" placeholder="Descrição do Evento" rows="3" class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                <button id="adicionar-btn" class="bg-green-600 text-white p-3 rounded-md hover:bg-green-700 transition duration-300 shadow-md">Adicionar Evento</button>
+            </div>
+        </section>
+    </main>
 
-        <article>
-            <h3>Calor excessivo e ilhas de calor</h3>
-            <p>O desmatamento reduz a evapotranspiração das plantas, elevando a temperatura das cidades e aumentando o efeito das ilhas de calor.</p>
-        </article>
+    <footer class="bg-gray-800 text-white p-4 mt-8 rounded-t-lg">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Festejando Campo e Cidade. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-        <article>
-            <h3>Redução da qualidade de vida</h3>
-            <p>A destruição das florestas impacta a biodiversidade, aumenta a poluição e reduz o contato com áreas verdes, afetando a saúde mental e respiratória.</p>
-        </article>
+    <script>
+        // Array para armazenar os eventos
+        let eventos = [];
 
-        <a href="https://www.youtube.com/watch?v=ILh7nDEKGqc&pp=ygUXSW1wYWN0byBkbyBEZXNtYXRhbWVudG8%3D" class="cta-button" target="_blank">Como impacta o mundo? <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-color);"></i></a>
-    </section>
+        // Função para exibir os eventos na página
+        function exibirEventos() {
+            const eventosLista = document.getElementById('eventos-lista');
+            eventosLista.innerHTML = ''; // Limpa a lista antes de adicionar os eventos
 
-    <section id="consequencias" class="conteudo">
-        <h2>Consequências</h2>
-        <ul>
-            <li>Aumento das enchentes e erosão do solo</li>
-            <li>Aumento das temperaturas e mudanças climáticas</li>
-            <li>Perda da biodiversidade</li>
-            <li>Redução da qualidade de vida nas cidades</li>
-            <li>Agravamento de problemas de saúde</li>
-            <li>Impacto na economia de comunidades locais</li>
-        </ul>
-    </section>
+            if (eventos.length === 0) {
+                eventosLista.innerHTML = '<p class="text-gray-600 text-center col-span-full">Nenhum evento cadastrado ainda. Adicione um!</p>';
+                return;
+            }
 
-    <section id="conclusao" class="conteudo">
-        <h2>Conclusão</h2>
-        <p>O desmatamento impacta diretamente a vida humana. Para evitar suas consequências, é necessário preservar o meio ambiente, investir em reflorestamento e adotar práticas sustentáveis.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ILh7nDEKGqc?si=feol6sZCHo1Cg-jQ" title="YouTube video.">
-    </section>
+            eventos.forEach(evento => {
+                const eventoCard = document.createElement('div');
+                eventoCard.classList.add('bg-white', 'p-6', 'rounded-xl', 'shadow-lg', 'border', 'border-gray-200', 'hover:shadow-xl', 'transition-shadow', 'duration-300');
+                eventoCard.innerHTML = `
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">${evento.nome}</h3>
+                    <p class="text-gray-600 mb-1"><strong class="font-medium">Local:</strong> ${evento.local}</p>
+                    <p class="text-gray-600 mb-3"><strong class="font-medium">Data:</strong> ${new Date(evento.data).toLocaleDateString('pt-BR')}</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">${evento.descricao}</p>
+                `;
+                eventosLista.appendChild(eventoCard);
+            });
+        }
 
-</main>
+        // Função para adicionar um novo evento
+        document.getElementById('adicionar-btn').addEventListener('click', () => {
+            const nome = document.getElementById('nome-evento').value;
+            const local = document.getElementById('local-evento').value;
+            const data = document.getElementById('data-evento').value;
+            const descricao = document.getElementById('descricao-evento').value;
 
-<footer>
-    <a href="https://www.linkedin.com/in/femascheti" class="cta-footer">Faça parte dessa causa!</a>
-    <p>2025 | @femascheti</p>
-</footer>
+            // Validação simples para garantir que os campos não estão vazios
+            if (nome && local && data && descricao) {
+                eventos.push({ nome, local, data, descricao });
+                exibirEventos(); // Atualiza a lista de eventos na página
+
+                // Limpa os campos do formulário
+                document.getElementById('nome-evento').value = '';
+                document.getElementById('local-evento').value = '';
+                document.getElementById('data-evento').value = '';
+                document.getElementById('descricao-evento').value = '';
+            } else {
+                // Use uma modal ou elemento na página para exibir a mensagem,
+                // evite alert() em ambientes de iframe.
+                console.log('Por favor, preencha todos os campos para adicionar um evento.');
+                // Exemplo de como você poderia adicionar uma mensagem simples na UI:
+                // const mensagemDiv = document.createElement('div');
+                // mensagemDiv.textContent = 'Por favor, preencha todos os campos.';
+                // mensagemDiv.classList.add('text-red-500', 'mt-2');
+                // document.querySelector('section:last-of-type').appendChild(mensagemDiv);
+            }
+        });
+
+        // Exibe os eventos ao carregar a página (inicialmente a lista estará vazia)
+        exibirEventos();
+    </script>
 </body>
 </html>
-<!-- código omitido -->
-
-<a href="https://www.youtube.com/watch?v=IIh7nDEkGqc&pp=ygUXSW1wYWN0byBkbyBEZXMgbWF0YW1lbnQ%3D" class="cta-button" target="_blank">Como impacta o mundo? <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-color);"></i></a>
-
-<!-- código omitido -->
